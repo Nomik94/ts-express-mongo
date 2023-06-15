@@ -12,7 +12,7 @@ const mongoUri: string = process.env.MONGO_URI as string;
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/', router);
+app.use('/api', router);
 
 mongo
   .connect(mongoUri)
